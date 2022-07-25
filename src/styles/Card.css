@@ -1,0 +1,16 @@
+.card-style{
+    width: 25rem;
+}
+.buttons-styles{
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .card-style {
+        width: 100%;
+    }
+    .buttons-styles{
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
