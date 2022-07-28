@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import FormInputText from "../components/Form/FormInputText";
 import FormInputTextArea from "../components/Form/FormInputTextArea";
 import { useNavigate, useParams } from "react-router-dom";
-import "../styles/Card.css";
+import "../styles/Card.scss";
 import { useEffect, useState } from "react";
 import { useTasks } from "../context/TaskProvider";
 import { TaskI } from "../interfaces/task.interfaces";

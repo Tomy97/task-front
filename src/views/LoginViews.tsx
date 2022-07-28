@@ -1,5 +1,7 @@
-import React from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
+import ButtonComponent from "../components/ButtonComponent";
+import FormInputEmail from "../components/Form/FormInputEmail";
+import FormInputPassword from "../components/Form/FormInputPassword";
 
 const LoginViews = () => {
   return (
@@ -8,8 +10,18 @@ const LoginViews = () => {
         <Card>
           <Card.Body>
             <Form>
-              <h2 className="text-center">Login</h2>
-              
+              <h2 className="text-center">Login Form</h2>
+              <Row>
+                <Col md={12}>
+                  <FormInputEmail />
+                </Col>
+                <Col md={12}>
+                  <FormInputPassword />
+                </Col>
+                <Col md={12}>
+                  <ButtonComponent title="Enviar" />
+                </Col>
+              </Row>
             </Form>
           </Card.Body>
         </Card>

@@ -3,7 +3,7 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { TaskI } from "../interfaces/task.interfaces";
 import { useNavigate } from "react-router-dom";
 import { deleteTasksRequest } from "../services/task.service";
-import "../styles/Card.css";
+import "../styles/Card.scss";
 
 const CardComponent = ({ id, title, description }: TaskI) => {
   const handleDelete = async () => {

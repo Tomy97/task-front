@@ -4,7 +4,7 @@ import { TaskI } from "../interfaces/task.interfaces";
 export const getTasksRequest = async () =>
   await axios.get("http://localhost:4000/tasks");
 
-export const getTaskRequest = async (id: number) =>
+export const getTaskRequest = async (id: number) => 
   await axios.get(`http://localhost:4000/tasks/${id}`);
 
 export const createTaskRequest = async (task: TaskI) =>
