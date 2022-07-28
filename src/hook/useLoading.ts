@@ -5,7 +5,6 @@ export const useLoading = (initialStatus: boolean = false) => {
   const [message, setMessage] = useState("");
 
     const startLoading = () => {
-      
     setStatus(true);
   };
 
