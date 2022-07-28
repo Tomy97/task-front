@@ -20,10 +20,12 @@ const CreateTaskViews = () => {
     const loadTask = async () => {
       if (params.id) {
         const task = await getTask(Number(params.id));
-        setTask({
-          title: task.title,
-          description: task.description,
-        });
+        if (task) {
+          setTask({
+            title: task.title,
+            description: task.description,
+          }); 
+        }
       }
     };
     loadTask();

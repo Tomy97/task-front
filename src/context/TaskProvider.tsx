@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import {
   createTaskRequest,
   deleteTasksRequest,
@@ -70,7 +70,6 @@ export const TaskContextProvider = ({ children }: any) => {
     setLoading(true);
     try {
       const { data } = await getTaskRequest(id);
-      console.log(data);
       await setTasks(data);
     } catch (error) {
       console.error(error);

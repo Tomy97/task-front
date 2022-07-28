@@ -5,7 +5,7 @@ type TaskContextType = {
   tasks: TaskI[];
   loading: boolean;
   loadTasks: () => void;
-  getTask: (id: number) => void;
+  getTask: (id: number) => TaskI;
   createTask: (task: TaskI) => void;
   updateTask: (id: number, newFields: TaskI) => void;
   deleteTask: (id: number) => void;
@@ -17,7 +17,7 @@ export const TaskContext = createContext<TaskContextType>({
   createTask: () => {},
   updateTask: () => {},
   deleteTask: () => {},
-  getTask: () => {
+  getTask: (id: number) => {
     return {
       title: "",
       description: ""

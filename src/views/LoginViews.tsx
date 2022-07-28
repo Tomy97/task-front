@@ -2,12 +2,12 @@ import { Card, Col, Form, Row } from "react-bootstrap";
 import ButtonComponent from "../components/ButtonComponent";
 import FormInputEmail from "../components/Form/FormInputEmail";
 import FormInputPassword from "../components/Form/FormInputPassword";
-
+import '../styles/Card.scss';
 const LoginViews = () => {
   return (
     <Row className="justify-content-center py-5">
       <Col md={12} lg={3}>
-        <Card>
+        <Card className="card-style" >
           <Card.Body>
             <Form>
               <h2 className="text-center">Login Form</h2>
