@@ -1,18 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export const useLoading = (initialStatus: boolean = false) => {
-  const [status, setStatus] = useState(initialStatus);
-  const startLoading = () => {
-    setStatus(true);
+  const [loading, setLoading] = useState(initialStatus);
+  const setSearch = (status: boolean) => {
+    console.log(status);
+    setLoading(status);
   };
-
-  const stopLoading = () => {
-    setStatus(false);
-  };
-
   return {
-    status,
-    startLoading,
-    stopLoading
+    loading,
+    setSearch
   };
 };

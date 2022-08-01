@@ -1,13 +1,32 @@
-import { Form } from 'react-bootstrap'
-const FormInputPassword = () => {
-  return (
-    <Form.Group className="mb-3">
-        <Form.Label>
-            Password
-        </Form.Label>
-        <Form.Control type="password" name="password" placeholder="Enter password" />
-    </Form.Group>
-  )
-}
+import { Form } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { ILoginInputs } from "../../interfaces/users.intrerfaces";
 
-export default FormInputPassword
+const FormInputPassword = ({
+  name,
+  value,
+  placeholder,
+  onChange
+}: ILoginInputs) => {
+  return (
+    <Form.Group>
+      <Form.Label>Password</Form.Label>
+      <Form.Control
+        type="password"
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
+    </Form.Group>
+  );
+};
+
+FormInputPassword.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+export default FormInputPassword;

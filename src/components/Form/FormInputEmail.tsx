@@ -1,12 +1,32 @@
 import { Form } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { ILoginInputs } from "../../interfaces/users.intrerfaces";
 
-const FormInputEmail = () => {
+const FormInputEmail = ({
+  name,
+  value,
+  placeholder,
+  onChange
+}: ILoginInputs) => {
   return (
-    <Form.Group className="mb-3">
+    <Form.Group>
       <Form.Label>Email</Form.Label>
-      <Form.Control type="email" name="email" placeholder="Enter email" />
+      <Form.Control
+        type="email"
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
     </Form.Group>
   );
+};
+
+FormInputEmail.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default FormInputEmail;

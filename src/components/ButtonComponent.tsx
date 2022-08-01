@@ -1,10 +1,14 @@
-import { Button } from 'react-bootstrap';
-import PropTypes from 'prop-types';
+import { Button } from "react-bootstrap";
+import PropTypes from "prop-types";
 interface defineProps {
-    title: string;
+  title: string;
 }
-const ButtonComponent = ( { title }: defineProps ) => <Button variant="primary" >{ title }</Button>
+const ButtonComponent = ({ title }: defineProps) => (
+  <Button type="submit" variant="primary">
+    {title}
+  </Button>
+);
 ButtonComponent.propTypes = {
-    title: PropTypes.string,
-}
-export default ButtonComponent
+  title: PropTypes.string
+};
+export default ButtonComponent;
